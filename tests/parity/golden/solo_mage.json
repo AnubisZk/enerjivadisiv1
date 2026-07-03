@@ -1,0 +1,348 @@
+{
+  "scenario": "solo_mage",
+  "seed": 1002,
+  "sampleEvery": 20,
+  "ticks": 128,
+  "coverage": [
+    "class:mage (caster)",
+    "casting lifecycle (C4a)",
+    "effect dispatch + spell damage (C4b/C1)"
+  ],
+  "draws": 465,
+  "drawDigest": "9abb49d1",
+  "frames": [
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 428,
+      "state": "e2a07041",
+      "events": "741638a5",
+      "rng": {
+        "draws": 0,
+        "digest": "811c9dc5"
+      },
+      "label": "init",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "combatTimer": 99,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 1.5,
+          "fiveSecondRule": 99,
+          "hp": 54,
+          "id": 427,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 54,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        }
+      ]
+    },
+    {
+      "tick": 20,
+      "time": 1,
+      "nextId": 429,
+      "state": "6f53088e",
+      "events": "582f67e9",
+      "rng": {
+        "draws": 2,
+        "digest": "6c34af8f"
+      }
+    },
+    {
+      "tick": 40,
+      "time": 2,
+      "nextId": 429,
+      "state": "f58e4910",
+      "events": "3a67d18c",
+      "rng": {
+        "draws": 2,
+        "digest": "6c34af8f"
+      }
+    },
+    {
+      "tick": 60,
+      "time": 3,
+      "nextId": 429,
+      "state": "2b0a8ace",
+      "events": "98e25201",
+      "rng": {
+        "draws": 78,
+        "digest": "e335e8d9"
+      }
+    },
+    {
+      "tick": 80,
+      "time": 4,
+      "nextId": 429,
+      "state": "81e7aab2",
+      "events": "df8adbf7",
+      "rng": {
+        "draws": 184,
+        "digest": "845d6e3f"
+      }
+    },
+    {
+      "tick": 100,
+      "time": 5,
+      "nextId": 429,
+      "state": "10024abd",
+      "events": "cabcad0e",
+      "rng": {
+        "draws": 290,
+        "digest": "7263370e"
+      }
+    },
+    {
+      "tick": 120,
+      "time": 6,
+      "nextId": 429,
+      "state": "eda7aa25",
+      "events": "64fb76b3",
+      "rng": {
+        "draws": 416,
+        "digest": "c7469ead"
+      }
+    },
+    {
+      "tick": 128,
+      "time": 6.4,
+      "nextId": 429,
+      "state": "ee10ba9a",
+      "events": "741638a5",
+      "rng": {
+        "draws": 465,
+        "digest": "9abb49d1"
+      },
+      "label": "final",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 89,
+            "damageTaken": 17
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 27600,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castRemaining": 1.2,
+          "castTotal": 2,
+          "castingAbility": "frostbolt",
+          "combatTimer": 1.1,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": -0.037111,
+          "fallStartY": 1.5,
+          "fiveSecondRule": 1.55,
+          "gcdRemaining": 0.7,
+          "hp": 49983,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 10,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 816,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "potionCooldownUntil": -1,
+          "resource": 816,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 26,
+          "stats": {
+            "agi": 12,
+            "armor": 93,
+            "int": 52,
+            "spi": 40,
+            "sta": 23,
+            "str": 10
+          },
+          "targetId": 428,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 6,
+              "id": "fireball",
+              "kind": "dot",
+              "name": "Fireball",
+              "remaining": 2.05,
+              "school": "fire",
+              "sourceId": 427,
+              "tickInterval": 2,
+              "tickTimer": 0.05,
+              "value": 1
+            },
+            {
+              "duration": 6,
+              "id": "frostbolt_slow",
+              "kind": "slow",
+              "name": "Frostbolt",
+              "remaining": 4.65,
+              "school": "frost",
+              "sourceId": 427,
+              "value": 0.6
+            }
+          ],
+          "combatTimer": 1.1,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 3.104481,
+          "fallStartY": 1.5,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 8911,
+          "id": 428,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1.817683,
+            "y": 1.5,
+            "z": 2.910455
+          },
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 9000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1.817683,
+            "y": 1.5,
+            "z": 2.910455
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": 16
+          },
+          "stats": {
+            "armor": 40
+          },
+          "swingTimer": 0.9,
+          "tappedById": 427,
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              90
+            ]
+          ],
+          "wanderTarget": {
+            "x": 0.211616,
+            "y": 1.5,
+            "z": 7.685745
+          },
+          "wanderTimer": 27.6,
+          "weapon": {
+            "max": 12,
+            "min": 8,
+            "speed": 2
+          }
+        }
+      ]
+    }
+  ]
+}

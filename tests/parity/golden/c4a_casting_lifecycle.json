@@ -1,0 +1,1962 @@
+{
+  "scenario": "c4a_casting_lifecycle",
+  "seed": 1017,
+  "sampleEvery": 5,
+  "ticks": 158,
+  "coverage": [
+    "castAbility timed-cast START (mage fireball) + Math.max gcd arm",
+    "updateCasting progress + finish -> applyAbility spell-hit roll (rng) -> runEffects",
+    "pushbackCast timed branch (+CAST_PUSHBACK_SEC) via dealDamage mid-cast",
+    "updateCasting silence branch -> cancelCast (priest lesser_heal, holy)",
+    "castAbility channel START (warlock drain_life): spend+arm at START",
+    "applyChannelTick drainTick (rng.range draw + dealDamage + self-heal + healingThreat)",
+    "pushbackCast channel-fraction branch via dealDamage mid-channel",
+    "cancelCast fishing arm via dealDamage (FISHING_CAST_ID, not pushback)",
+    "multi-class casters: mage/priest/warlock"
+  ],
+  "draws": 676,
+  "drawDigest": "d78be395",
+  "frames": [
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 427,
+      "state": "5bc471b0",
+      "events": "741638a5",
+      "rng": {
+        "draws": 0,
+        "digest": "811c9dc5"
+      },
+      "label": "init",
+      "players": [],
+      "entities": []
+    },
+    {
+      "tick": 1,
+      "time": 0.05,
+      "nextId": 431,
+      "state": "5ac63f61",
+      "events": "b7c289dd",
+      "rng": {
+        "draws": 2,
+        "digest": "167b3524"
+      },
+      "label": "mage-pushback",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageTaken": 40
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "priest",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warlock",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castRemaining": 2.95,
+          "castTotal": 3,
+          "castingAbility": "fireball",
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": 0.54042,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99.05,
+          "gcdRemaining": 1.45,
+          "hp": 19960,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 954,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -3,
+            "y": -0.371544,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 954,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 29,
+          "stats": {
+            "agi": 12,
+            "armor": 101,
+            "int": 58,
+            "spi": 44,
+            "sta": 25,
+            "str": 10
+          },
+          "targetId": 430,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "combatTimer": 99.05,
+          "critChance": 0.0555,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0555,
+          "fallStartY": -0.348038,
+          "fiveSecondRule": 99.05,
+          "hp": 20000,
+          "id": 428,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 791,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": -0.348038,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 791,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 23,
+          "stats": {
+            "agi": 11,
+            "armor": 94,
+            "int": 45,
+            "spi": 57,
+            "sta": 24,
+            "str": 10
+          },
+          "templateId": "priest",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 11,
+          "combatTimer": 99.05,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": -0.20935,
+          "fiveSecondRule": 99.05,
+          "hp": 20000,
+          "id": 429,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 925,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 3,
+            "y": -0.20935,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 925,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 28,
+          "stats": {
+            "agi": 12,
+            "armor": 98,
+            "int": 55,
+            "spi": 43,
+            "sta": 26,
+            "str": 11
+          },
+          "templateId": "warlock",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 1.475441,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 200000,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 0.139364,
+            "y": 0.697739,
+            "z": -39.986671
+          },
+          "level": 8,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 0.139364,
+            "y": 0.697739,
+            "z": -39.986671
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "y": -0.371544,
+            "z": -40
+          },
+          "stats": {
+            "armor": 70
+          },
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              1
+            ]
+          ],
+          "wanderTarget": {
+            "x": 2.198041,
+            "y": 0.703258,
+            "z": -39.789768
+          },
+          "wanderTimer": 30,
+          "weapon": {
+            "max": 18,
+            "min": 11,
+            "speed": 2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "time": 0.25,
+      "nextId": 431,
+      "state": "0d76ccd2",
+      "events": "ddb8670b",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 10,
+      "time": 0.5,
+      "nextId": 431,
+      "state": "673c4b15",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 15,
+      "time": 0.75,
+      "nextId": 431,
+      "state": "cc2a316a",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 20,
+      "time": 1,
+      "nextId": 431,
+      "state": "47d5aeca",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 25,
+      "time": 1.25,
+      "nextId": 431,
+      "state": "51f5a3cc",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 30,
+      "time": 1.5,
+      "nextId": 431,
+      "state": "4c17f4c3",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 35,
+      "time": 1.75,
+      "nextId": 431,
+      "state": "bdabd62b",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 40,
+      "time": 2,
+      "nextId": 431,
+      "state": "d8e0abe6",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "1bec7232"
+      }
+    },
+    {
+      "tick": 45,
+      "time": 2.25,
+      "nextId": 431,
+      "state": "28c40c2b",
+      "events": "4b1f6257",
+      "rng": {
+        "draws": 26,
+        "digest": "f4ae4714"
+      }
+    },
+    {
+      "tick": 50,
+      "time": 2.5,
+      "nextId": 431,
+      "state": "f8aefb45",
+      "events": "741638a5",
+      "rng": {
+        "draws": 52,
+        "digest": "dbb945bb"
+      }
+    },
+    {
+      "tick": 55,
+      "time": 2.75,
+      "nextId": 431,
+      "state": "dd3aa04a",
+      "events": "741638a5",
+      "rng": {
+        "draws": 70,
+        "digest": "181340bf"
+      }
+    },
+    {
+      "tick": 60,
+      "time": 3,
+      "nextId": 431,
+      "state": "d08f2171",
+      "events": "741638a5",
+      "rng": {
+        "draws": 89,
+        "digest": "d29ae0d0"
+      }
+    },
+    {
+      "tick": 65,
+      "time": 3.25,
+      "nextId": 431,
+      "state": "1d20027c",
+      "events": "741638a5",
+      "rng": {
+        "draws": 109,
+        "digest": "1547d8e6"
+      }
+    },
+    {
+      "tick": 70,
+      "time": 3.5,
+      "nextId": 431,
+      "state": "a5c18ec0",
+      "events": "741638a5",
+      "rng": {
+        "draws": 131,
+        "digest": "73c308ab"
+      }
+    },
+    {
+      "tick": 75,
+      "time": 3.75,
+      "nextId": 431,
+      "state": "d029afd9",
+      "events": "741638a5",
+      "rng": {
+        "draws": 156,
+        "digest": "b0f0a8fc"
+      }
+    },
+    {
+      "tick": 80,
+      "time": 4,
+      "nextId": 431,
+      "state": "50e39865",
+      "events": "5a650ac7",
+      "rng": {
+        "draws": 167,
+        "digest": "74b1af3b"
+      }
+    },
+    {
+      "tick": 85,
+      "time": 4.25,
+      "nextId": 431,
+      "state": "52328386",
+      "events": "14f93cdb",
+      "rng": {
+        "draws": 209,
+        "digest": "3b4dc41e"
+      }
+    },
+    {
+      "tick": 90,
+      "time": 4.5,
+      "nextId": 431,
+      "state": "e6e7b6a6",
+      "events": "741638a5",
+      "rng": {
+        "draws": 242,
+        "digest": "da25c69e"
+      }
+    },
+    {
+      "tick": 95,
+      "time": 4.75,
+      "nextId": 431,
+      "state": "cc088d64",
+      "events": "741638a5",
+      "rng": {
+        "draws": 287,
+        "digest": "716ffc87"
+      }
+    },
+    {
+      "tick": 100,
+      "time": 5,
+      "nextId": 431,
+      "state": "0fb01183",
+      "events": "741638a5",
+      "rng": {
+        "draws": 310,
+        "digest": "ff006f2b"
+      }
+    },
+    {
+      "tick": 105,
+      "time": 5.25,
+      "nextId": 431,
+      "state": "f0813cba",
+      "events": "741638a5",
+      "rng": {
+        "draws": 324,
+        "digest": "deadb970"
+      }
+    },
+    {
+      "tick": 110,
+      "time": 5.5,
+      "nextId": 431,
+      "state": "e4223e18",
+      "events": "741638a5",
+      "rng": {
+        "draws": 347,
+        "digest": "00d73c92"
+      }
+    },
+    {
+      "tick": 115,
+      "time": 5.75,
+      "nextId": 431,
+      "state": "ba53430c",
+      "events": "741638a5",
+      "rng": {
+        "draws": 386,
+        "digest": "0e9bddd2"
+      }
+    },
+    {
+      "tick": 120,
+      "time": 6,
+      "nextId": 431,
+      "state": "568e83f7",
+      "events": "741638a5",
+      "rng": {
+        "draws": 413,
+        "digest": "23d5651e"
+      }
+    },
+    {
+      "tick": 123,
+      "time": 6.15,
+      "nextId": 431,
+      "state": "e05c171a",
+      "events": "5bcaf540",
+      "rng": {
+        "draws": 443,
+        "digest": "63014a38"
+      },
+      "label": "priest-silence-cancel",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 66,
+            "damageTaken": 82
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "priest",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warlock",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castTotal": 4,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": 0.54042,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 2.2,
+          "hp": 19918,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 954,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -3,
+            "y": -0.371544,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 889,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 29,
+          "stats": {
+            "agi": 12,
+            "armor": 101,
+            "int": 58,
+            "spi": 44,
+            "sta": 25,
+            "str": 10
+          },
+          "targetId": 430,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "auras": [
+            {
+              "duration": 4,
+              "id": "c4a_silence",
+              "kind": "silence",
+              "name": "Silenced",
+              "remaining": 3.95,
+              "school": "physical",
+              "sourceId": 430
+            }
+          ],
+          "castTotal": 2,
+          "combatTimer": 105.15,
+          "critChance": 0.0555,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0555,
+          "fallStartY": -0.348038,
+          "fiveSecondRule": 105.15,
+          "gcdRemaining": 1.4,
+          "hp": 19000,
+          "id": 428,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 791,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": -0.348038,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 791,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 23,
+          "stats": {
+            "agi": 11,
+            "armor": 94,
+            "int": 45,
+            "spi": 57,
+            "sta": 24,
+            "str": 10
+          },
+          "templateId": "priest",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 11,
+          "combatTimer": 105.15,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": -0.20935,
+          "fiveSecondRule": 105.15,
+          "hp": 20000,
+          "id": 429,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 925,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 3,
+            "y": -0.20935,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 925,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 28,
+          "stats": {
+            "agi": 12,
+            "armor": 98,
+            "int": 55,
+            "spi": 43,
+            "sta": 26,
+            "str": 11
+          },
+          "templateId": "warlock",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 6,
+              "id": "fireball",
+              "kind": "dot",
+              "name": "Fireball",
+              "remaining": 4,
+              "school": "fire",
+              "sourceId": 427,
+              "tickInterval": 2,
+              "tickTimer": 2,
+              "value": 2
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -2.582128,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199934,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "level": 8,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "y": -0.371544,
+            "z": -40
+          },
+          "stats": {
+            "armor": 70
+          },
+          "swingTimer": 0.05,
+          "tappedById": 427,
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              67
+            ]
+          ],
+          "wanderTarget": {
+            "x": 2.198041,
+            "y": 0.703258,
+            "z": -39.789768
+          },
+          "wanderTimer": 30,
+          "weapon": {
+            "max": 18,
+            "min": 11,
+            "speed": 2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 125,
+      "time": 6.25,
+      "nextId": 431,
+      "state": "61ba08da",
+      "events": "0599576b",
+      "rng": {
+        "draws": 456,
+        "digest": "f38c2dfc"
+      }
+    },
+    {
+      "tick": 130,
+      "time": 6.5,
+      "nextId": 431,
+      "state": "c24917c8",
+      "events": "741638a5",
+      "rng": {
+        "draws": 494,
+        "digest": "46ef0f20"
+      }
+    },
+    {
+      "tick": 135,
+      "time": 6.75,
+      "nextId": 431,
+      "state": "764fa243",
+      "events": "741638a5",
+      "rng": {
+        "draws": 529,
+        "digest": "cad4963e"
+      }
+    },
+    {
+      "tick": 140,
+      "time": 7,
+      "nextId": 431,
+      "state": "a0162d3d",
+      "events": "741638a5",
+      "rng": {
+        "draws": 562,
+        "digest": "21ec43d7"
+      }
+    },
+    {
+      "tick": 145,
+      "time": 7.25,
+      "nextId": 431,
+      "state": "019db386",
+      "events": "0ec6711a",
+      "rng": {
+        "draws": 590,
+        "digest": "33abcb59"
+      }
+    },
+    {
+      "tick": 145,
+      "time": 7.25,
+      "nextId": 431,
+      "state": "c156a639",
+      "events": "ee575692",
+      "rng": {
+        "draws": 590,
+        "digest": "33abcb59"
+      },
+      "label": "warlock-channel-pushback",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 66,
+            "damageTaken": 95
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "priest",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warlock",
+          "companionUpgrades": {},
+          "counters": {
+            "damageTaken": 40
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castTotal": 4,
+          "combatTimer": 1.05,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": 0.54042,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 3.3,
+          "hp": 19905,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 954,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -3,
+            "y": -0.371544,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 889,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 29,
+          "stats": {
+            "agi": 12,
+            "armor": 101,
+            "int": 58,
+            "spi": 44,
+            "sta": 25,
+            "str": 10
+          },
+          "targetId": 430,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "auras": [
+            {
+              "duration": 4,
+              "id": "c4a_silence",
+              "kind": "silence",
+              "name": "Silenced",
+              "remaining": 2.85,
+              "school": "physical",
+              "sourceId": 430
+            }
+          ],
+          "castTotal": 2,
+          "combatTimer": 106.25,
+          "critChance": 0.0555,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0555,
+          "fallStartY": -0.348038,
+          "fiveSecondRule": 106.25,
+          "gcdRemaining": 0.3,
+          "hp": 19000,
+          "id": 428,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 791,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": -0.348038,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 791,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 23,
+          "stats": {
+            "agi": 11,
+            "armor": 94,
+            "int": 45,
+            "spi": 57,
+            "sta": 24,
+            "str": 10
+          },
+          "templateId": "priest",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 11,
+          "castRemaining": 2.65,
+          "castTotal": 5,
+          "castingAbility": "drain_life",
+          "channelTickEvery": 1,
+          "channelTickTimer": 0.9,
+          "channeling": true,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": -0.718939,
+          "fallStartY": -0.20935,
+          "fiveSecondRule": 1.1,
+          "gcdRemaining": 0.4,
+          "hp": 19460,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 925,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 3,
+            "y": -0.20935,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 890,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 28,
+          "stats": {
+            "agi": 12,
+            "armor": 98,
+            "int": 55,
+            "spi": 43,
+            "sta": 26,
+            "str": 11
+          },
+          "targetId": 430,
+          "templateId": "warlock",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 6,
+              "id": "fireball",
+              "kind": "dot",
+              "name": "Fireball",
+              "remaining": 2.9,
+              "school": "fire",
+              "sourceId": 427,
+              "tickInterval": 2,
+              "tickTimer": 0.9,
+              "value": 2
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -2.582128,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199934,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "level": 8,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "y": -0.371544,
+            "z": -40
+          },
+          "stats": {
+            "armor": 70
+          },
+          "swingTimer": 0.95,
+          "tappedById": 427,
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              67
+            ]
+          ],
+          "wanderTarget": {
+            "x": 2.198041,
+            "y": 0.703258,
+            "z": -39.789768
+          },
+          "wanderTimer": 30,
+          "weapon": {
+            "max": 18,
+            "min": 11,
+            "speed": 2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 150,
+      "time": 7.5,
+      "nextId": 431,
+      "state": "f298272b",
+      "events": "d77d4e0f",
+      "rng": {
+        "draws": 629,
+        "digest": "34f00ebf"
+      }
+    },
+    {
+      "tick": 153,
+      "time": 7.65,
+      "nextId": 431,
+      "state": "991fb724",
+      "events": "081f8aa0",
+      "rng": {
+        "draws": 649,
+        "digest": "c0cc1883"
+      },
+      "label": "warlock-fishing-cancel",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 66,
+            "damageTaken": 95
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "priest",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warlock",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 13,
+            "damageTaken": 60
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castTotal": 4,
+          "combatTimer": 1.45,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": 0.54042,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 3.7,
+          "hp": 19905,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 954,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -3,
+            "y": -0.371544,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 889,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 29,
+          "stats": {
+            "agi": 12,
+            "armor": 101,
+            "int": 58,
+            "spi": 44,
+            "sta": 25,
+            "str": 10
+          },
+          "targetId": 430,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "auras": [
+            {
+              "duration": 4,
+              "id": "c4a_silence",
+              "kind": "silence",
+              "name": "Silenced",
+              "remaining": 2.45,
+              "school": "physical",
+              "sourceId": 430
+            }
+          ],
+          "castTotal": 2,
+          "combatTimer": 106.65,
+          "critChance": 0.0555,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0555,
+          "fallStartY": -0.348038,
+          "fiveSecondRule": 106.65,
+          "hp": 19000,
+          "id": 428,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 791,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": -0.348038,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 791,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 23,
+          "stats": {
+            "agi": 11,
+            "armor": 94,
+            "int": 45,
+            "spi": 57,
+            "sta": 24,
+            "str": 10
+          },
+          "templateId": "priest",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 11,
+          "castTotal": 5,
+          "channelTickEvery": 1,
+          "channelTickTimer": 0.5,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": -0.718939,
+          "fallStartY": -0.20935,
+          "fiveSecondRule": 1.5,
+          "hp": 19453,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 925,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 3,
+            "y": -0.20935,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 890,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 28,
+          "stats": {
+            "agi": 12,
+            "armor": 98,
+            "int": 55,
+            "spi": 43,
+            "sta": 26,
+            "str": 11
+          },
+          "targetId": 430,
+          "templateId": "warlock",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 6,
+              "id": "fireball",
+              "kind": "dot",
+              "name": "Fireball",
+              "remaining": 2.5,
+              "school": "fire",
+              "sourceId": 427,
+              "tickInterval": 2,
+              "tickTimer": 0.5,
+              "value": 2
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -2.582128,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199921,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "level": 8,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "y": -0.371544,
+            "z": -40
+          },
+          "stats": {
+            "armor": 70
+          },
+          "swingTimer": 0.55,
+          "tappedById": 427,
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              67
+            ],
+            [
+              429,
+              19.5
+            ]
+          ],
+          "wanderTarget": {
+            "x": 2.198041,
+            "y": 0.703258,
+            "z": -39.789768
+          },
+          "wanderTimer": 30,
+          "weapon": {
+            "max": 18,
+            "min": 11,
+            "speed": 2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 155,
+      "time": 7.75,
+      "nextId": 431,
+      "state": "dd3f48bb",
+      "events": "741638a5",
+      "rng": {
+        "draws": 667,
+        "digest": "81d1d4a0"
+      }
+    },
+    {
+      "tick": 158,
+      "time": 7.9,
+      "nextId": 431,
+      "state": "8149e776",
+      "events": "741638a5",
+      "rng": {
+        "draws": 676,
+        "digest": "d78be395"
+      },
+      "label": "final",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 66,
+            "damageTaken": 95
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "priest",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warlock",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 13,
+            "damageTaken": 60
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "lifetimeXp": 44000,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "castTotal": 4,
+          "combatTimer": 1.7,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": 0.54042,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 3.95,
+          "hp": 19905,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 954,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -3,
+            "y": -0.371544,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 889,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 29,
+          "stats": {
+            "agi": 12,
+            "armor": 101,
+            "int": 58,
+            "spi": 44,
+            "sta": 25,
+            "str": 10
+          },
+          "targetId": 430,
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "auras": [
+            {
+              "duration": 4,
+              "id": "c4a_silence",
+              "kind": "silence",
+              "name": "Silenced",
+              "remaining": 2.2,
+              "school": "physical",
+              "sourceId": 430
+            }
+          ],
+          "castTotal": 2,
+          "combatTimer": 106.9,
+          "critChance": 0.0555,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0555,
+          "fallStartY": -0.348038,
+          "fiveSecondRule": 106.9,
+          "hp": 19000,
+          "id": 428,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 791,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": -0.348038,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 791,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 23,
+          "stats": {
+            "agi": 11,
+            "armor": 94,
+            "int": 45,
+            "spi": 57,
+            "sta": 24,
+            "str": 10
+          },
+          "templateId": "priest",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 11,
+          "castTotal": 5,
+          "channelTickEvery": 1,
+          "channelTickTimer": 0.5,
+          "combatTimer": 0.25,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "facing": -0.718939,
+          "fallStartY": -0.20935,
+          "fiveSecondRule": 1.75,
+          "hp": 19453,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 12,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 20000,
+          "maxResource": 925,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 3,
+            "y": -0.20935,
+            "z": -45
+          },
+          "potionCooldownUntil": -1,
+          "resource": 890,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 28,
+          "stats": {
+            "agi": 12,
+            "armor": 98,
+            "int": 55,
+            "spi": 43,
+            "sta": 26,
+            "str": 11
+          },
+          "targetId": 430,
+          "templateId": "warlock",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 6,
+              "id": "fireball",
+              "kind": "dot",
+              "name": "Fireball",
+              "remaining": 2.25,
+              "school": "fire",
+              "sourceId": 427,
+              "tickInterval": 2,
+              "tickTimer": 0.25,
+              "value": 2
+            }
+          ],
+          "combatTimer": 0.25,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -2.582128,
+          "fallStartY": -0.371544,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199921,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "level": 8,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": -0.497515,
+            "y": 0.532606,
+            "z": -41.003718
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "y": -0.371544,
+            "z": -40
+          },
+          "stats": {
+            "armor": 70
+          },
+          "swingTimer": 0.3,
+          "tappedById": 427,
+          "templateId": "forest_wolf",
+          "threat": [
+            [
+              427,
+              67
+            ],
+            [
+              429,
+              19.5
+            ]
+          ],
+          "wanderTarget": {
+            "x": 2.198041,
+            "y": 0.703258,
+            "z": -39.789768
+          },
+          "wanderTimer": 30,
+          "weapon": {
+            "max": 18,
+            "min": 11,
+            "speed": 2
+          }
+        }
+      ]
+    }
+  ]
+}

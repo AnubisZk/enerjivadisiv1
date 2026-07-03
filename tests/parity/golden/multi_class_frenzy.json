@@ -1,0 +1,1553 @@
+{
+  "scenario": "multi_class_frenzy",
+  "seed": 1015,
+  "sampleEvery": 5,
+  "ticks": 10,
+  "coverage": [
+    "dealDamage -> maybeFrenzyOnHit rng draw (the only in-slice draw, ~5651/5702)",
+    "blood_frenzy push then refresh branches",
+    "amp stack + threat handoff + tap rights across multiple attackers",
+    "multi-class sources: warrior/mage/rogue"
+  ],
+  "draws": 13,
+  "drawDigest": "eeae5de8",
+  "frames": [
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 427,
+      "state": "5bc471b0",
+      "events": "741638a5",
+      "rng": {
+        "draws": 0,
+        "digest": "811c9dc5"
+      },
+      "label": "init",
+      "players": [],
+      "entities": []
+    },
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 431,
+      "state": "47c850c7",
+      "events": "4c8bc60a",
+      "rng": {
+        "draws": 3,
+        "digest": "3c991a61"
+      },
+      "label": "frenzy-round-0",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 30
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 30
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "rogue",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 30
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "footpad_jerkin",
+            "mainhand": "rusty_dagger"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": 2.312838,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 29.963644,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 2.307095,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 428,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 2.307095,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 42,
+          "critChance": 0.0625,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0625,
+          "fallStartY": 2.299474,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4,
+            "y": 2.299474,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "energy",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 6,
+          "stats": {
+            "agi": 25,
+            "armor": 104,
+            "int": 11,
+            "spi": 12,
+            "sta": 17,
+            "str": 17
+          },
+          "templateId": "rogue",
+          "weapon": {
+            "dagger": true,
+            "max": 4,
+            "min": 2,
+            "speed": 1.8
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "auras": [
+            {
+              "duration": 8,
+              "id": "blood_frenzy",
+              "kind": "buff_haste",
+              "name": "Blood Frenzy",
+              "remaining": 8,
+              "school": "physical",
+              "sourceId": 430,
+              "value": 1.3
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199910,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "level": 6,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8.5,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "stats": {
+            "armor": 80
+          },
+          "tappedById": 427,
+          "templateId": "old_greyjaw",
+          "threat": [
+            [
+              427,
+              31
+            ],
+            [
+              428,
+              30
+            ],
+            [
+              429,
+              30
+            ]
+          ],
+          "weapon": {
+            "max": 19,
+            "min": 12,
+            "speed": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 431,
+      "state": "3c81a85c",
+      "events": "e8afba24",
+      "rng": {
+        "draws": 6,
+        "digest": "a3b60f56"
+      },
+      "label": "frenzy-round-1",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 60
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 60
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "rogue",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 60
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "footpad_jerkin",
+            "mainhand": "rusty_dagger"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": 2.312838,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 59.927288,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 2.307095,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 428,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 2.307095,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 42,
+          "critChance": 0.0625,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0625,
+          "fallStartY": 2.299474,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4,
+            "y": 2.299474,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "energy",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 6,
+          "stats": {
+            "agi": 25,
+            "armor": 104,
+            "int": 11,
+            "spi": 12,
+            "sta": 17,
+            "str": 17
+          },
+          "templateId": "rogue",
+          "weapon": {
+            "dagger": true,
+            "max": 4,
+            "min": 2,
+            "speed": 1.8
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "auras": [
+            {
+              "duration": 8,
+              "id": "blood_frenzy",
+              "kind": "buff_haste",
+              "name": "Blood Frenzy",
+              "remaining": 8,
+              "school": "physical",
+              "sourceId": 430,
+              "value": 1.3
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199820,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "level": 6,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8.5,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "stats": {
+            "armor": 80
+          },
+          "tappedById": 427,
+          "templateId": "old_greyjaw",
+          "threat": [
+            [
+              427,
+              61
+            ],
+            [
+              428,
+              60
+            ],
+            [
+              429,
+              60
+            ]
+          ],
+          "weapon": {
+            "max": 19,
+            "min": 12,
+            "speed": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 431,
+      "state": "2c0648ec",
+      "events": "e8afba24",
+      "rng": {
+        "draws": 9,
+        "digest": "3ec38ca1"
+      },
+      "label": "frenzy-round-2",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 90
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 90
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "rogue",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 90
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "footpad_jerkin",
+            "mainhand": "rusty_dagger"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": 2.312838,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 89.890932,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 2.307095,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 428,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 2.307095,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 42,
+          "critChance": 0.0625,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0625,
+          "fallStartY": 2.299474,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4,
+            "y": 2.299474,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "energy",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 6,
+          "stats": {
+            "agi": 25,
+            "armor": 104,
+            "int": 11,
+            "spi": 12,
+            "sta": 17,
+            "str": 17
+          },
+          "templateId": "rogue",
+          "weapon": {
+            "dagger": true,
+            "max": 4,
+            "min": 2,
+            "speed": 1.8
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "auras": [
+            {
+              "duration": 8,
+              "id": "blood_frenzy",
+              "kind": "buff_haste",
+              "name": "Blood Frenzy",
+              "remaining": 8,
+              "school": "physical",
+              "sourceId": 430,
+              "value": 1.3
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199730,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "level": 6,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8.5,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "stats": {
+            "armor": 80
+          },
+          "tappedById": 427,
+          "templateId": "old_greyjaw",
+          "threat": [
+            [
+              427,
+              91
+            ],
+            [
+              428,
+              90
+            ],
+            [
+              429,
+              90
+            ]
+          ],
+          "weapon": {
+            "max": 19,
+            "min": 12,
+            "speed": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 431,
+      "state": "eb11bd3f",
+      "events": "e8afba24",
+      "rng": {
+        "draws": 12,
+        "digest": "67a2e3e1"
+      },
+      "label": "frenzy-round-3",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "rogue",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "footpad_jerkin",
+            "mainhand": "rusty_dagger"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": 2.312838,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 2.307095,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 428,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 2.307095,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 42,
+          "critChance": 0.0625,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0625,
+          "fallStartY": 2.299474,
+          "fiveSecondRule": 99,
+          "hp": 50000,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4,
+            "y": 2.299474,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "energy",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 6,
+          "stats": {
+            "agi": 25,
+            "armor": 104,
+            "int": 11,
+            "spi": 12,
+            "sta": 17,
+            "str": 17
+          },
+          "templateId": "rogue",
+          "weapon": {
+            "dagger": true,
+            "max": 4,
+            "min": 2,
+            "speed": 1.8
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "auras": [
+            {
+              "duration": 8,
+              "id": "blood_frenzy",
+              "kind": "buff_haste",
+              "name": "Blood Frenzy",
+              "remaining": 8,
+              "school": "physical",
+              "sourceId": 430,
+              "value": 1.3
+            }
+          ],
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199640,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "level": 6,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8.5,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "stats": {
+            "armor": 80
+          },
+          "tappedById": 427,
+          "templateId": "old_greyjaw",
+          "threat": [
+            [
+              427,
+              121
+            ],
+            [
+              428,
+              120
+            ],
+            [
+              429,
+              120
+            ]
+          ],
+          "weapon": {
+            "max": 19,
+            "min": 12,
+            "speed": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "time": 0.25,
+      "nextId": 431,
+      "state": "0bf09ae9",
+      "events": "9bbf560a",
+      "rng": {
+        "draws": 13,
+        "digest": "eeae5de8"
+      }
+    },
+    {
+      "tick": 10,
+      "time": 0.5,
+      "nextId": 431,
+      "state": "fe235d32",
+      "events": "741638a5",
+      "rng": {
+        "draws": 13,
+        "digest": "eeae5de8"
+      }
+    },
+    {
+      "tick": 10,
+      "time": 0.5,
+      "nextId": 431,
+      "state": "fe235d32",
+      "events": "741638a5",
+      "rng": {
+        "draws": 13,
+        "digest": "eeae5de8"
+      },
+      "label": "final",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "mage",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 428,
+          "equipment": {
+            "chest": "apprentice_robe",
+            "mainhand": "gnarled_staff"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        },
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "cls": "rogue",
+          "companionUpgrades": {},
+          "counters": {
+            "damageDealt": 120
+          },
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 429,
+          "equipment": {
+            "chest": "footpad_jerkin",
+            "mainhand": "rusty_dagger"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "combatTimer": 0.5,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99.5,
+          "hp": 50000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "y": 2.312838,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 10,
+          "combatTimer": 0.5,
+          "critChance": 0.056,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.056,
+          "fallStartY": 2.307095,
+          "fiveSecondRule": 99.5,
+          "hp": 50000,
+          "id": 428,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 195,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 2.307095,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 195,
+          "resourceType": "mana",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 13,
+          "stats": {
+            "agi": 12,
+            "armor": 57,
+            "int": 25,
+            "spi": 22,
+            "sta": 14,
+            "str": 10
+          },
+          "templateId": "mage",
+          "weapon": {
+            "max": 6,
+            "min": 3,
+            "speed": 2.9
+          }
+        },
+        {
+          "aiState": "idle",
+          "attackPower": 42,
+          "combatTimer": 0.5,
+          "critChance": 0.0625,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.0625,
+          "fallStartY": 2.299474,
+          "fiveSecondRule": 99.5,
+          "hp": 50000,
+          "id": 429,
+          "inCombat": true,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4,
+            "y": 2.299474,
+            "z": -30
+          },
+          "potionCooldownUntil": -1,
+          "resource": 100,
+          "resourceType": "energy",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 6,
+          "stats": {
+            "agi": 25,
+            "armor": 104,
+            "int": 11,
+            "spi": 12,
+            "sta": 17,
+            "str": 17
+          },
+          "templateId": "rogue",
+          "weapon": {
+            "dagger": true,
+            "max": 4,
+            "min": 2,
+            "speed": 1.8
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "attack",
+          "auras": [
+            {
+              "duration": 8,
+              "id": "blood_frenzy",
+              "kind": "buff_haste",
+              "name": "Blood Frenzy",
+              "remaining": 7.5,
+              "school": "physical",
+              "sourceId": 430,
+              "value": 1.3
+            }
+          ],
+          "combatTimer": 0.5,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -2.677945,
+          "fallStartY": 2.312838,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 199640,
+          "id": 430,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "level": 6,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 200000,
+          "moveSpeed": 8.5,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 1,
+            "y": 2.312838,
+            "z": -28
+          },
+          "stats": {
+            "armor": 80
+          },
+          "swingTimer": 0.934615,
+          "tappedById": 427,
+          "templateId": "old_greyjaw",
+          "threat": [
+            [
+              427,
+              121
+            ],
+            [
+              428,
+              120
+            ],
+            [
+              429,
+              120
+            ]
+          ],
+          "weapon": {
+            "max": 19,
+            "min": 12,
+            "speed": 1.8
+          }
+        }
+      ]
+    }
+  ]
+}

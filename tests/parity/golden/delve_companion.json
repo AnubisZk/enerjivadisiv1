@@ -1,0 +1,946 @@
+{
+  "scenario": "delve_companion",
+  "seed": 3010,
+  "sampleEvery": 5,
+  "ticks": 51,
+  "coverage": [
+    "updateDelveCompanion combat arm: acquire owner target -> close-to-reach -> mobSwing on cadence (~16762 rng draws)",
+    "updateDelveCompanion rank-2 heal arm: DELVE_COMPANION_HEAL_PCT[2] percent heal of the lowest-HP party member (heal + spellfx tick)",
+    "updateDelveCompanion heel arm: moveToward owner past DELVE_COMPANION_FOLLOW, then warp + rebucket past PET_TELEPORT_DISTANCE",
+    "combat_start/low_hp barks via maybeCompanionBark (stays on Sim)"
+  ],
+  "draws": 7,
+  "drawDigest": "519f5f26",
+  "frames": [
+    {
+      "tick": 0,
+      "time": 0,
+      "nextId": 428,
+      "state": "b715b1e3",
+      "events": "741638a5",
+      "rng": {
+        "draws": 0,
+        "digest": "811c9dc5"
+      },
+      "label": "init",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {},
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 46,
+          "combatTimer": 99,
+          "critChance": 0.06,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.06,
+          "fallStartY": 1.5,
+          "fiveSecondRule": 99,
+          "hp": 90,
+          "id": 427,
+          "kind": "player",
+          "level": 1,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 90,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 20,
+            "armor": 110,
+            "int": 10,
+            "spi": 11,
+            "sta": 22,
+            "str": 23
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "time": 0.25,
+      "nextId": 438,
+      "state": "72649c8d",
+      "events": "31db22c6",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 10,
+      "time": 0.5,
+      "nextId": 438,
+      "state": "6a0497de",
+      "events": "741638a5",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 15,
+      "time": 0.75,
+      "nextId": 438,
+      "state": "6725dc21",
+      "events": "741638a5",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 20,
+      "time": 1,
+      "nextId": 438,
+      "state": "8e49e05a",
+      "events": "741638a5",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 25,
+      "time": 1.25,
+      "nextId": 438,
+      "state": "609ba1f6",
+      "events": "741638a5",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 30,
+      "time": 1.5,
+      "nextId": 438,
+      "state": "1ab27df3",
+      "events": "741638a5",
+      "rng": {
+        "draws": 4,
+        "digest": "210ed007"
+      }
+    },
+    {
+      "tick": 35,
+      "time": 1.75,
+      "nextId": 438,
+      "state": "f9f427e9",
+      "events": "4c0eb096",
+      "rng": {
+        "draws": 5,
+        "digest": "0d840b47"
+      }
+    },
+    {
+      "tick": 40,
+      "time": 2,
+      "nextId": 438,
+      "state": "c556c22c",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "0d840b47"
+      }
+    },
+    {
+      "tick": 40,
+      "time": 2,
+      "nextId": 438,
+      "state": "c556c22c",
+      "events": "741638a5",
+      "rng": {
+        "draws": 5,
+        "digest": "0d840b47"
+      },
+      "label": "combat",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {
+            "companion_tessa": 2
+          },
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "lifetimeXp": 11200,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 70,
+          "combatTimer": 101,
+          "critChance": 0.063,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.063,
+          "fiveSecondRule": 101,
+          "hp": 50000,
+          "id": 427,
+          "kind": "player",
+          "level": 7,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4800,
+            "z": -1253
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 26,
+            "armor": 194,
+            "int": 10,
+            "spi": 11,
+            "sta": 34,
+            "str": 35
+          },
+          "targetId": 434,
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -1.840638,
+          "fiveSecondRule": 99,
+          "hp": 119,
+          "id": 433,
+          "inCombat": true,
+          "kind": "mob",
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 119,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "ownerId": 427,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4807.561955,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4801.5,
+            "z": -1253
+          },
+          "stats": {
+            "armor": 32
+          },
+          "swingTimer": 2,
+          "templateId": "acolyte_tessa",
+          "wanderTimer": 1,
+          "weapon": {
+            "max": 11,
+            "min": 7,
+            "speed": 2.6
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 2.1099,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 40000,
+          "id": 434,
+          "kind": "mob",
+          "level": 9,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 40000,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4804.205029,
+            "z": -1172.515497
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4800,
+            "z": -1170
+          },
+          "stats": {
+            "armor": 160
+          },
+          "stompTimer": 12,
+          "templateId": "deacon_varric",
+          "wanderTarget": {
+            "x": 4806.470105,
+            "z": -1173.870492
+          },
+          "wanderTimer": 28.05,
+          "weapon": {
+            "max": 51,
+            "min": 33,
+            "speed": 2.2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 41,
+      "time": 2.05,
+      "nextId": 438,
+      "state": "e0a53205",
+      "events": "af8ae25e",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      },
+      "label": "heal",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {
+            "companion_tessa": 2
+          },
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "lifetimeXp": 11200,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 70,
+          "combatTimer": 101.05,
+          "critChance": 0.063,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.063,
+          "fallStartY": 40.863877,
+          "fiveSecondRule": 101.05,
+          "hp": 29000,
+          "id": 427,
+          "inCombat": true,
+          "kind": "player",
+          "level": 7,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4810.561955,
+            "y": 40.863877,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 26,
+            "armor": 194,
+            "int": 10,
+            "spi": 11,
+            "sta": 34,
+            "str": 35
+          },
+          "targetId": 434,
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101.05,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": -1.865903,
+          "fiveSecondRule": 99,
+          "hp": 119,
+          "id": 433,
+          "inCombat": true,
+          "kind": "mob",
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 119,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "ownerId": 427,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4807.561955,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4801.5,
+            "z": -1253
+          },
+          "stats": {
+            "armor": 32
+          },
+          "swingTimer": 1.9,
+          "templateId": "acolyte_tessa",
+          "wanderTimer": 3,
+          "weapon": {
+            "max": 11,
+            "min": 7,
+            "speed": 2.6
+          }
+        },
+        {
+          "aggroTargetId": 427,
+          "aiState": "chase",
+          "combatTimer": 101.05,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 2.1099,
+          "fiveSecondRule": 99,
+          "hostile": true,
+          "hp": 40000,
+          "id": 434,
+          "inCombat": true,
+          "kind": "mob",
+          "leashAnchor": {
+            "x": 4804.205029,
+            "z": -1172.515497
+          },
+          "level": 9,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 40000,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4804.205029,
+            "z": -1172.515497
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4800,
+            "z": -1170
+          },
+          "stats": {
+            "armor": 160
+          },
+          "stompTimer": 12,
+          "templateId": "deacon_varric",
+          "threat": [
+            [
+              427,
+              1
+            ]
+          ],
+          "wanderTarget": {
+            "x": 4806.470105,
+            "z": -1173.870492
+          },
+          "wanderTimer": 28.05,
+          "weapon": {
+            "max": 51,
+            "min": 33,
+            "speed": 2.2
+          }
+        }
+      ]
+    },
+    {
+      "tick": 45,
+      "time": 2.25,
+      "nextId": 438,
+      "state": "9cf75004",
+      "events": "741638a5",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      }
+    },
+    {
+      "tick": 49,
+      "time": 2.45,
+      "nextId": 438,
+      "state": "25b82a2c",
+      "events": "741638a5",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      },
+      "label": "heel-walk",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {
+            "companion_tessa": 2
+          },
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "lifetimeXp": 11200,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 70,
+          "combatTimer": 101.45,
+          "critChance": 0.063,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.063,
+          "fallStartY": 40.405722,
+          "fiveSecondRule": 101.45,
+          "hp": 29000,
+          "id": 427,
+          "kind": "player",
+          "level": 7,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4819.561955,
+            "y": 39.285722,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 26,
+            "armor": 194,
+            "int": 10,
+            "spi": 11,
+            "sta": 34,
+            "str": 35
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101.45,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 1.570796,
+          "fiveSecondRule": 99,
+          "hp": 119,
+          "id": 433,
+          "kind": "mob",
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 119,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "ownerId": 427,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4810.361955,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4801.5,
+            "z": -1253
+          },
+          "stats": {
+            "armor": 32
+          },
+          "swingTimer": 1.1,
+          "templateId": "acolyte_tessa",
+          "wanderTimer": 2.6,
+          "weapon": {
+            "max": 11,
+            "min": 7,
+            "speed": 2.6
+          }
+        }
+      ]
+    },
+    {
+      "tick": 50,
+      "time": 2.5,
+      "nextId": 438,
+      "state": "91d1a415",
+      "events": "741638a5",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      }
+    },
+    {
+      "tick": 51,
+      "time": 2.55,
+      "nextId": 438,
+      "state": "c99bab65",
+      "events": "741638a5",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      },
+      "label": "heel-teleport",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {
+            "companion_tessa": 2
+          },
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "lifetimeXp": 11200,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 70,
+          "combatTimer": 101.55,
+          "critChance": 0.063,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.063,
+          "fallStartY": 45.266528,
+          "fiveSecondRule": 101.55,
+          "hp": 29000,
+          "id": 427,
+          "kind": "player",
+          "level": 7,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4890.361955,
+            "y": 45.226528,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 26,
+            "armor": 194,
+            "int": 10,
+            "spi": 11,
+            "sta": 34,
+            "str": 35
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101.55,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 1.570796,
+          "fiveSecondRule": 99,
+          "hp": 119,
+          "id": 433,
+          "kind": "mob",
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 119,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "ownerId": 427,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4890.361955,
+            "y": 45.266528,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4801.5,
+            "z": -1253
+          },
+          "stats": {
+            "armor": 32
+          },
+          "swingTimer": 0.9,
+          "templateId": "acolyte_tessa",
+          "wanderTimer": 2.5,
+          "weapon": {
+            "max": 11,
+            "min": 7,
+            "speed": 2.6
+          }
+        }
+      ]
+    },
+    {
+      "tick": 51,
+      "time": 2.55,
+      "nextId": 438,
+      "state": "c99bab65",
+      "events": "741638a5",
+      "rng": {
+        "draws": 7,
+        "digest": "519f5f26"
+      },
+      "label": "final",
+      "players": [
+        {
+          "activeLoadout": -1,
+          "arena2v2Rating": 1500,
+          "arenaRating": 1500,
+          "autoEquip": true,
+          "cls": "warrior",
+          "companionUpgrades": {
+            "companion_tessa": 2
+          },
+          "counters": {},
+          "delveClears": {},
+          "delveDaily": {},
+          "entityId": 427,
+          "equipment": {
+            "chest": "recruit_tunic",
+            "mainhand": "worn_sword"
+          },
+          "lifetimeXp": 11200,
+          "talents": {
+            "choices": {},
+            "ranks": {}
+          }
+        }
+      ],
+      "entities": [
+        {
+          "aiState": "idle",
+          "attackPower": 70,
+          "combatTimer": 101.55,
+          "critChance": 0.063,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.063,
+          "fallStartY": 45.266528,
+          "fiveSecondRule": 101.55,
+          "hp": 29000,
+          "id": 427,
+          "kind": "player",
+          "level": 7,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 50000,
+          "maxResource": 100,
+          "moveSpeed": 7,
+          "overpowerUntil": -1,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4890.361955,
+            "y": 45.226528,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "resourceType": "rage",
+          "spawnPos": {
+            "x": 2,
+            "y": 1.5,
+            "z": -2
+          },
+          "spellPower": 5,
+          "stats": {
+            "agi": 26,
+            "armor": 194,
+            "int": 10,
+            "spi": 11,
+            "sta": 34,
+            "str": 35
+          },
+          "templateId": "warrior",
+          "weapon": {
+            "max": 5,
+            "min": 2,
+            "speed": 2
+          }
+        },
+        {
+          "aiState": "idle",
+          "combatTimer": 101.55,
+          "critChance": 0.05,
+          "detonateTimer": "Infinity",
+          "dodgeChance": 0.05,
+          "facing": 1.570796,
+          "fiveSecondRule": 99,
+          "hp": 119,
+          "id": 433,
+          "kind": "mob",
+          "level": 5,
+          "lootFfaTimer": "Infinity",
+          "maxHp": 119,
+          "moveSpeed": 7,
+          "onGround": true,
+          "overpowerUntil": -1,
+          "ownerId": 427,
+          "petMode": "defensive",
+          "pos": {
+            "x": 4890.361955,
+            "y": 45.266528,
+            "z": -1171.49505
+          },
+          "potionCooldownUntil": -1,
+          "spawnPos": {
+            "x": 4801.5,
+            "z": -1253
+          },
+          "stats": {
+            "armor": 32
+          },
+          "swingTimer": 0.9,
+          "templateId": "acolyte_tessa",
+          "wanderTimer": 2.5,
+          "weapon": {
+            "max": 11,
+            "min": 7,
+            "speed": 2.6
+          }
+        }
+      ]
+    }
+  ]
+}
