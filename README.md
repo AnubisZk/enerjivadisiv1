@@ -1,5 +1,128 @@
 <div align="center">
 
+# Enerji Vadisi
+
+**World of ClaudeCraft icinde REpower temali oynanabilir egitim bolgesi.**
+
+[Yerelde oyna](#yerelde-oyna) · [Icerik](#icerik) · [Dogrulama](#dogrulama) · [Multiplayer sunucu](#multiplayer-sunucu) · [Kaynak proje](#world-of-claudecraft-kaynak-proje)
+
+</div>
+
+## Bu repo nedir?
+
+Bu repo, World of ClaudeCraft tabani uzerine eklenmis **Windwright Vale / Enerji Vadisi** bolgesidir. Eastbrook Vale'in dogu ucunda, seviye 4-7 bandinda, yenilenebilir enerji saha is akisini fantastik bir gorev zincirine donusturur.
+
+Oyuncu, Elara Sunmere ("Master Windwright") ile birlikte bir sky-mill sahasini kurar: saha olcumu, malzeme tedarigi, kanat montaji, elektrik guvenligi, ayna hizalama ve yuk altinda ariza teshisi adimlarini oyun diliyle oynar. Icerik REpower Erasmus+ KA220-VET projesi icin hazirlanmistir, fakat gorev metinleri didaktik ders anlatimi gibi degil, World of ClaudeCraft dunyasina ait dogal macera metinleri gibi yazilmistir.
+
+## Yerelde oyna
+
+Gerekenler:
+
+- Node.js 22+ onerilir. Node 20 ile de yerel dogrulama yapildi, fakat bazi upstream paketler Node 22+ uyarisi verebilir.
+- npm
+
+Kurulum:
+
+```bash
+git clone https://github.com/AnubisZk/enerjivadisiv1.git
+cd enerjivadisiv1
+npm ci
+npm run dev
+```
+
+Sonra tarayicida ac:
+
+```text
+http://localhost:5173
+```
+
+Oyunda **Play Offline** sec, karakter olustur ve Eastbrook Vale'den doguya ilerle. Haritada **Windwright Vale** etiketi Eastbrook'un dogu tarafinda, Boar Meadow'un otesinde gorunur. Elara Sunmere yaklasik `(145, 58)` konumundadir.
+
+## Icerik
+
+Enerji Vadisi su oynanabilir icerikleri ekler:
+
+- **Yeni NPC:** Elara Sunmere, "Master Windwright"
+- **Yeni bolge cebi:** Windwright Vale, Eastbrook Vale'in dogu kenari
+- **4 dusman tipi:** Coil Scavenger, Galespun Sprite, Sparkwisp, boss olarak The Overcharge
+- **6 gorevlik zincir:**
+  1. Measure Twice, Build Once
+  2. The Missing Windings
+  3. Blades for the Sky-Mill
+  4. Ground the Current
+  5. Chasing the Sun
+  6. The Overcharge
+- **17 yeni esya adi:** Turkce dahil desteklenen dillere elle cevrildi
+- **Headless smoke testi:** `scripts/ev_smoke.ts`, zincirin tamamini otomatik oynar
+
+Gorev zincirinin egitim karsiliklari:
+
+| Oyun gorevi | RE saha is akisi |
+|---|---|
+| Measure Twice, Build Once | Saha kaynak olcumu |
+| The Missing Windings | Malzeme tedarigi ve guvenligi |
+| Blades for the Sky-Mill | Kanat montaji ve rotor dengesi |
+| Ground the Current | Topraklama ve elektrik guvenligi |
+| Chasing the Sun | Ayna hizalama ve devreye alma |
+| The Overcharge | Yuk altinda ariza teshisi |
+
+## Dogrulama
+
+Bu repo hazirlanirken su kontroller temiz gecmistir:
+
+```bash
+npm run i18n:build
+npm run i18n:gen
+npm run wiki:content
+UPDATE_PARITY=1 npx vitest run tests/parity/parity.test.ts --testTimeout=30000
+npx tsc --noEmit
+npx vitest run tests/sim.test.ts tests/localization_coverage.test.ts tests/item_level.test.ts --testTimeout=30000
+npx tsx scripts/ev_smoke.ts
+npm run build
+```
+
+Beklenen smoke cikisi:
+
+```text
+SMOKE PASS: full chain complete
+```
+
+## Multiplayer sunucu
+
+Yerel multiplayer gelistirme icin:
+
+```bash
+cp .env.example .env
+# .env icinde POSTGRES_PASSWORD ve DATABASE_URL ayarlarini doldur
+npm run db:up
+npm run server
+npm run dev
+```
+
+Tarayicida `http://localhost:5173` ac, **Play Online** sec, hesap ve karakter olustur.
+
+Oracle VM veya baska bir VPS uzerinde yayinlamak icin temel yol:
+
+```bash
+git clone https://github.com/AnubisZk/enerjivadisiv1.git
+cd enerjivadisiv1
+cp .env.example .env
+# guclu POSTGRES_PASSWORD ayarla
+docker compose up -d --build
+```
+
+Uretimde `ALLOW_DEV_COMMANDS=1` kullanma. TLS ve domain icin Caddy veya Nginx ile `:8787` portunu ters proxy arkasina almak en temiz yoldur. Ayrintili upstream notlar icin [DEPLOY.md](DEPLOY.md) dosyasina bak.
+
+## Notlar
+
+- Bu repo, bos `AnubisZk/enerjivadisiv1` reposuna World of ClaudeCraft tabani ve Enerji Vadisi icerigiyle ilk commit olarak aktarildi.
+- GitHub token'inda `workflow` izni olmadigi icin upstream `.github/workflows/*.yml` dosyalari ilk push'a dahil edilmedi.
+- Orijinal World of ClaudeCraft dokumantasyonu asagida korunur.
+
+## World of ClaudeCraft kaynak proje
+
+<div align="center">
+
 # World of ClaudeCraft
 
 **Quest, group up, and raid a hand-built world, free in your browser. Open source, web3, and online right now.**
