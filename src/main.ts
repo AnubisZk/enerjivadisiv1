@@ -198,7 +198,7 @@ const ATTACK_MOVE_ACQUIRE_RANGE = 12; // yards; an attack-move toward open groun
 // marker shows a "held" state instead of looking like a stuck game.
 const IMMOBILE_AURA_KINDS = new Set(['stun', 'root', 'incapacitate', 'polymorph']);
 const IMMOBILE_NOTE_THROTTLE_MS = 1200; // min gap between "Can't move!" floats while held
-const HOMEPAGE_MUSIC_MUTED_KEY = 'woc_homepage_music_muted';
+const HOMEPAGE_MUSIC_MUTED_KEY = 'ev_homepage_music_muted';
 const HOMEPAGE_MUSIC_VOLUME = 0.225;
 const GRAPHICS_PRESET_HIGH = 3;
 const GRAPHICS_PRESET_ULTRA = 4;
@@ -7301,7 +7301,7 @@ function wireStartScreens(): void {
 // playing through the loading screen and fades out once the game is on screen.
 function initHomepageMusic(): void {
   if (homepageMusic) return;
-  const el = new Audio('/audio/main-theme.mp3');
+  const el = new Audio('/audio/where-the-valley-wakes.mp3');
   el.loop = true;
   el.muted = homepageMusicMuted;
   el.preload = 'auto';

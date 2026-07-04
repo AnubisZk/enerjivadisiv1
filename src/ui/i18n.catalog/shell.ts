@@ -11,7 +11,7 @@ export const shellStrings = {
     seo: {
       title: 'Enerji Vadisi: REpower Training Adventure',
       description:
-        'Play Windwright Vale, a REpower renewable-energy training adventure built inside World of ClaudeCraft.',
+        'Play Windwright Vale, a REpower renewable-energy training adventure about renewable-energy field work.',
       genre: 'MMORPG',
       playMode: 'Multiplayer',
       applicationCategory: 'Game',
@@ -27,8 +27,8 @@ export const shellStrings = {
       languageSelection: 'Language selection',
       characterActions: 'Character actions',
       githubProject: 'Open the Enerji Vadisi GitHub project',
-      discordCommunity: 'Join the World of ClaudeCraft Discord community',
-      donateProject: 'Donate to support Enerji Vadisi',
+      discordCommunity: 'Join the Enerji Vadisi community',
+      donateProject: 'Support Enerji Vadisi',
     },
     loading: {
       world: 'Loading world...',

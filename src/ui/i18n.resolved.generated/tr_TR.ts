@@ -1873,14 +1873,14 @@ export const tr_TR: EnTranslations = {
     "play": "Oyna",
     "stats": "İstatistikler",
     "about": "Hakkında",
-    "highscores": "En Yüksek Skorlar",
-    "wiki": "Wiki",
-    "news": "Haberler",
-    "download": "İndir",
-    "loginRegister": "Giriş/Kayıt",
+    "highscores": "Saha Kayıtları",
+    "wiki": "Rehber",
+    "news": "Güncellemeler",
+    "download": "Başlatıcı",
+    "loginRegister": "Giriş",
     "account": "Hesap",
     "logout": "Çıkış Yap",
-    "donate": "Bağış Yap"
+    "donate": "Destekle"
   },
   "stats": {
     "title": "Diyar Durumu",
@@ -1889,13 +1889,13 @@ export const tr_TR: EnTranslations = {
     "realmName": "Diyar Adı"
   },
   "footer": {
-    "copyright": "2026 World of ClaudeCraft",
-    "githubLink": "https://github.com/levy-street/world-of-claudecraft",
-    "githubLabel": "Açık Kaynak Proje",
-    "whitepaper": "Teknik Doküman",
+    "copyright": "2026 Enerji Vadisi",
+    "githubLink": "https://github.com/AnubisZk/enerjivadisiv1",
+    "githubLabel": "Enerji Vadisi GitHub",
+    "whitepaper": "Proje Notları",
     "terms": "Hizmet Koşulları",
     "privacy": "Gizlilik Politikası",
-    "discordLabel": "Discord'a Katıl"
+    "discordLabel": "Topluluk"
   },
   "settings": {
     "languageLoading": "Dil yükleniyor...",
@@ -1903,7 +1903,7 @@ export const tr_TR: EnTranslations = {
     "languageLoadUnavailable": "Bu dil mevcut değil."
   },
   "highscores": {
-    "title": "Yüksek Skorlar Liderlik Tablosu",
+    "title": "Saha Kayıtları",
     "desc": "Diyarın en büyük şampiyonlarını takip et ve ilerlemeni kıyasla."
   },
   "wiki": {
@@ -1912,7 +1912,7 @@ export const tr_TR: EnTranslations = {
     "cta": "Wiki'ye Göz At"
   },
   "news": {
-    "title": "Haberler ve Güncellemeler",
+    "title": "Güncellemeler",
     "desc": "En son yama notlarını, etkinlikleri ve topluluk güncellemelerini oku.",
     "loading": "En son güncellemeler yükleniyor…",
     "error": "Güncellemeler yüklenemedi. Lütfen daha sonra tekrar dene.",
@@ -1921,7 +1921,7 @@ export const tr_TR: EnTranslations = {
     "viewOnGithub": "GitHub'da Görüntüle"
   },
   "download": {
-    "title": "Masaüstü Başlatıcısını İndir",
+    "title": "Başlatıcı",
     "desc": "Optimize edilmiş performans ve tam ekran oyun için bağımsız başlatıcıyı edinin."
   },
   "comingSoon": {
@@ -2648,9 +2648,9 @@ export const tr_TR: EnTranslations = {
     "mainNavigation": "Ana gezinme",
     "languageSelection": "Dil seçimi",
     "characterActions": "Karakter eylemleri",
-    "githubProject": "World of ClaudeCraft GitHub projesini aç",
-    "discordCommunity": "World of ClaudeCraft Discord topluluğuna katıl",
-    "donateProject": "World of ClaudeCraft'a destek olmak için bağış yap"
+    "githubProject": "Enerji Vadisi GitHub projesini aç",
+    "discordCommunity": "Enerji Vadisi topluluğuna katıl",
+    "donateProject": "Enerji Vadisi'ni destekle"
   },
   "loading": {
     "world": "Dünya yükleniyor...",

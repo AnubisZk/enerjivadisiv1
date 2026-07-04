@@ -1873,14 +1873,14 @@ export const en_CA: EnTranslations = {
     "play": "Play",
     "stats": "Statistics",
     "about": "About",
-    "highscores": "High Scores",
-    "wiki": "Wiki",
-    "news": "News",
-    "download": "Download",
-    "loginRegister": "Login/Register",
+    "highscores": "Field Records",
+    "wiki": "Guide",
+    "news": "Updates",
+    "download": "Launcher",
+    "loginRegister": "Login",
     "account": "Account",
     "logout": "Logout",
-    "donate": "Donate"
+    "donate": "Support"
   },
   "stats": {
     "title": "Realm Status",
@@ -1892,10 +1892,10 @@ export const en_CA: EnTranslations = {
     "copyright": "2026 Enerji Vadisi",
     "githubLink": "https://github.com/AnubisZk/enerjivadisiv1",
     "githubLabel": "Enerji Vadisi GitHub",
-    "whitepaper": "Whitepaper",
+    "whitepaper": "Project Notes",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
-    "discordLabel": "Join the Discord"
+    "discordLabel": "Community"
   },
   "settings": {
     "languageLoading": "Loading language...",
@@ -1903,16 +1903,16 @@ export const en_CA: EnTranslations = {
     "languageLoadUnavailable": "That language is not available."
   },
   "highscores": {
-    "title": "High Scores Leaderboard",
+    "title": "Field Records",
     "desc": "Track the realm's greatest champions and compare your progress."
   },
   "wiki": {
-    "title": "Game Wiki & Guide",
+    "title": "Field Guide",
     "desc": "Discover the secrets of the realm, class guides, and strategies.",
-    "cta": "Browse the Wiki"
+    "cta": "Browse the Guide"
   },
   "news": {
-    "title": "News & Updates",
+    "title": "Updates",
     "desc": "Read the latest patch notes, events, and community updates.",
     "loading": "Loading the latest updates…",
     "error": "Couldn't load updates. Please try again later.",
@@ -1921,7 +1921,7 @@ export const en_CA: EnTranslations = {
     "viewOnGithub": "View on GitHub"
   },
   "download": {
-    "title": "Download Desktop Launcher",
+    "title": "Launcher",
     "desc": "Get the standalone launcher for optimized performance and full-screen play."
   },
   "comingSoon": {
@@ -2634,7 +2634,7 @@ export const en_CA: EnTranslations = {
   },
   "seo": {
     "title": "Enerji Vadisi: REpower Training Adventure",
-    "description": "Play Windwright Vale, a REpower renewable-energy training adventure built inside World of ClaudeCraft.",
+    "description": "Play Windwright Vale, a REpower renewable-energy training adventure about renewable-energy field work.",
     "genre": "MMORPG",
     "playMode": "Multiplayer",
     "applicationCategory": "Game",
@@ -2649,8 +2649,8 @@ export const en_CA: EnTranslations = {
     "languageSelection": "Language selection",
     "characterActions": "Character actions",
     "githubProject": "Open the Enerji Vadisi GitHub project",
-    "discordCommunity": "Join the World of ClaudeCraft Discord community",
-    "donateProject": "Donate to support Enerji Vadisi"
+    "discordCommunity": "Join the Enerji Vadisi community",
+    "donateProject": "Support Enerji Vadisi"
   },
   "loading": {
     "world": "Loading world...",
