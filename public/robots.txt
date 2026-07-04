@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://worldofclaudecraft.com/sitemap.xml
-Sitemap: https://worldofclaudecraft.com/sitemap-characters.xml
+Sitemap: https://energyvalley.netlify.app/sitemap.xml

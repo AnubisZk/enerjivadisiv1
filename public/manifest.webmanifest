@@ -1,7 +1,7 @@
 {
-  "name": "World of ClaudeCraft",
-  "short_name": "ClaudeCraft",
-  "description": "World of ClaudeCraft mobile realm",
+  "name": "Enerji Vadisi",
+  "short_name": "Enerji Vadisi",
+  "description": "Windwright Vale REpower training adventure",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",

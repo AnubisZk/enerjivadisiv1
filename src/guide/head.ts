@@ -19,7 +19,7 @@ import { GUIDE_CLASSES } from './content.generated';
 import { LEVEL_CAP } from './data';
 
 // The site origin. Matches index.html's canonical/og:url host exactly.
-const ORIGIN = 'https://worldofclaudecraft.com';
+const ORIGIN = 'https://energyvalley.netlify.app';
 const LOGO = `${ORIGIN}/woc_logo_square.webp`;
 const GITHUB_URL = 'https://github.com/levy-street/world-of-claudecraft';
 const DISCORD_URL = 'https://discord.gg/GjhnUsBtw';

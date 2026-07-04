@@ -7,21 +7,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const indexPath = path.resolve(__dirname, '../index.html');
 const expectedAlternates = [
-  { hreflang: 'en', href: 'https://worldofclaudecraft.com/' },
-  { hreflang: 'es', href: 'https://worldofclaudecraft.com/?lang=es' },
-  { hreflang: 'es-ES', href: 'https://worldofclaudecraft.com/?lang=es_ES' },
-  { hreflang: 'fr-FR', href: 'https://worldofclaudecraft.com/?lang=fr_FR' },
-  { hreflang: 'fr-CA', href: 'https://worldofclaudecraft.com/?lang=fr_CA' },
-  { hreflang: 'en-CA', href: 'https://worldofclaudecraft.com/?lang=en_CA' },
-  { hreflang: 'it-IT', href: 'https://worldofclaudecraft.com/?lang=it_IT' },
-  { hreflang: 'de-DE', href: 'https://worldofclaudecraft.com/?lang=de_DE' },
-  { hreflang: 'zh-CN', href: 'https://worldofclaudecraft.com/?lang=zh_CN' },
-  { hreflang: 'zh-TW', href: 'https://worldofclaudecraft.com/?lang=zh_TW' },
-  { hreflang: 'ko-KR', href: 'https://worldofclaudecraft.com/?lang=ko_KR' },
-  { hreflang: 'ja-JP', href: 'https://worldofclaudecraft.com/?lang=ja_JP' },
-  { hreflang: 'pt-BR', href: 'https://worldofclaudecraft.com/?lang=pt_BR' },
-  { hreflang: 'ru-RU', href: 'https://worldofclaudecraft.com/?lang=ru_RU' },
-  { hreflang: 'x-default', href: 'https://worldofclaudecraft.com/' },
+  { hreflang: 'en', href: 'https://energyvalley.netlify.app/' },
+  { hreflang: 'es', href: 'https://energyvalley.netlify.app/?lang=es' },
+  { hreflang: 'es-ES', href: 'https://energyvalley.netlify.app/?lang=es_ES' },
+  { hreflang: 'fr-FR', href: 'https://energyvalley.netlify.app/?lang=fr_FR' },
+  { hreflang: 'fr-CA', href: 'https://energyvalley.netlify.app/?lang=fr_CA' },
+  { hreflang: 'en-CA', href: 'https://energyvalley.netlify.app/?lang=en_CA' },
+  { hreflang: 'it-IT', href: 'https://energyvalley.netlify.app/?lang=it_IT' },
+  { hreflang: 'de-DE', href: 'https://energyvalley.netlify.app/?lang=de_DE' },
+  { hreflang: 'zh-CN', href: 'https://energyvalley.netlify.app/?lang=zh_CN' },
+  { hreflang: 'zh-TW', href: 'https://energyvalley.netlify.app/?lang=zh_TW' },
+  { hreflang: 'ko-KR', href: 'https://energyvalley.netlify.app/?lang=ko_KR' },
+  { hreflang: 'ja-JP', href: 'https://energyvalley.netlify.app/?lang=ja_JP' },
+  { hreflang: 'pt-BR', href: 'https://energyvalley.netlify.app/?lang=pt_BR' },
+  { hreflang: 'ru-RU', href: 'https://energyvalley.netlify.app/?lang=ru_RU' },
+  { hreflang: 'x-default', href: 'https://energyvalley.netlify.app/' },
 ];
 
 function audit() {
@@ -197,14 +197,14 @@ function audit() {
   });
 
   // 8. Canonical Link Check
-  const hasCanonical = html.includes('rel="canonical"') && html.includes('href="https://worldofclaudecraft.com/"');
+  const hasCanonical = html.includes('rel="canonical"') && html.includes('href="https://energyvalley.netlify.app/"');
   checks.push({
     category: 'SEO',
     name: 'Canonical link tag is present and correct',
     passed: hasCanonical,
     score: hasCanonical ? 10 : 0,
     maxScore: 10,
-    details: hasCanonical ? 'Found rel="canonical" pointing to worldofclaudecraft.com.' : 'Missing rel="canonical" link tag.'
+    details: hasCanonical ? 'Found rel="canonical" pointing to energyvalley.netlify.app.' : 'Missing rel="canonical" link tag.'
   });
 
   // 9. GEO / hreflang alternates Check

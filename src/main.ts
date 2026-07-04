@@ -227,7 +227,7 @@ function isNativeRuntime(): boolean {
   return cap?.isNativePlatform?.() === true;
 }
 
-const SITE_URL = 'https://worldofclaudecraft.com/';
+const SITE_URL = 'https://energyvalley.netlify.app/';
 
 const RESOURCE_KEYS = {
   mana: 'classDetails.resources.mana',
@@ -4225,25 +4225,25 @@ function updateSeoMetadata(lang: SupportedLanguage): void {
         '@graph': [
           {
             '@type': 'WebSite',
-            '@id': 'https://worldofclaudecraft.com/#website',
+            '@id': 'https://energyvalley.netlify.app/#website',
             name: 'World of ClaudeCraft',
             alternateName: 'World of Claudecraft',
             url: canonicalHref,
             inLanguage: languageTag(lang),
             description: t('seo.description'),
-            publisher: { '@id': 'https://worldofclaudecraft.com/#organization' },
+            publisher: { '@id': 'https://energyvalley.netlify.app/#organization' },
           },
           {
             '@type': 'Organization',
-            '@id': 'https://worldofclaudecraft.com/#organization',
+            '@id': 'https://energyvalley.netlify.app/#organization',
             name: 'World of ClaudeCraft',
-            url: 'https://worldofclaudecraft.com/',
-            logo: 'https://worldofclaudecraft.com/woc_logo_square.webp',
+            url: 'https://energyvalley.netlify.app/',
+            logo: 'https://energyvalley.netlify.app/woc_logo_square.webp',
             sameAs,
           },
           {
             '@type': 'VideoGame',
-            '@id': 'https://worldofclaudecraft.com/#game',
+            '@id': 'https://energyvalley.netlify.app/#game',
             name: 'World of ClaudeCraft',
             alternateName: 'World of Claudecraft',
             genre: t('seo.genre'),
@@ -4251,10 +4251,10 @@ function updateSeoMetadata(lang: SupportedLanguage): void {
             applicationCategory: t('seo.applicationCategory'),
             operatingSystem: t('seo.operatingSystem'),
             url: canonicalHref,
-            image: 'https://worldofclaudecraft.com/woc_logo_square.webp',
+            image: 'https://energyvalley.netlify.app/woc_logo_square.webp',
             description: t('seo.description'),
             inLanguage: languageTag(lang),
-            publisher: { '@id': 'https://worldofclaudecraft.com/#organization' },
+            publisher: { '@id': 'https://energyvalley.netlify.app/#organization' },
             sameAs,
           },
         ],
