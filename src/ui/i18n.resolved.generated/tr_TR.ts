@@ -1940,7 +1940,7 @@ export const tr_TR: EnTranslations = {
     "serverOnline": "Çevrimiçi",
     "serverOffline": "Çevrimdışı",
     "play": "Oyna",
-    "playAria": "World of ClaudeCraft oyna",
+    "playAria": "Enerji Vadisi oyna",
     "serverLabel": "Diyarını seç",
     "serverAria": "Diyar seç: Çevrimiçi veya Çevrimdışı",
     "serverOfflineSub": "Anında yerel dünya",
@@ -2633,14 +2633,14 @@ export const tr_TR: EnTranslations = {
     }
   },
   "seo": {
-    "title": "World of ClaudeCraft: Klasik Tarzı Web MMO'su",
-    "description": "Doğrudan tarayıcında oynanabilen klasik tarzı bir mikro MMO olan World of ClaudeCraft'ta destansı bir maceraya atıl. Kalıcı bir ortak diyara katıl, sınıfları geliştir ve düşmanları alt et!",
+    "title": "Enerji Vadisi: REpower egitim macerasi",
+    "description": "World of ClaudeCraft icinde kurulan REpower yenilenebilir enerji egitim macerasi Windwright Vale / Enerji Vadisi oynanabilir.",
     "genre": "MMORPG",
     "playMode": "Çok Oyunculu",
     "applicationCategory": "Oyun",
     "operatingSystem": "Web tarayıcısı",
-    "officialLabel": "Resmi World of ClaudeCraft web sitesi",
-    "officialBody": "worldofclaudecraft.com, Claudemoon diyarının resmi ücretsiz tarayıcı MMO'sudur. Kalıcı bir karakterle çevrimiçi oyna, çevrimdışı tek başına keşfet, wiki'yi oku ve bu siteden doğrulanmış topluluk bağlantılarını takip et."
+    "officialLabel": "REpower egitim bolgesi",
+    "officialBody": "Windwright Vale; saha olcumu, tedarik, montaj, topraklama, hizalama ve ariza teshisini oynanabilir bir gorev zincirine donusturur."
   },
   "a11y": {
     "goHome": "Ana sayfaya git",
@@ -2847,8 +2847,8 @@ export const tr_TR: EnTranslations = {
     "otherInstallDetail": "En iyi tam ekran mobil deneyim için bu sayfayı yükleyin veya Ana ekranınıza ekleyin."
   },
   "serverUnavailable": {
-    "title": "World of ClaudeCraft - Diyar Kullanılamıyor",
-    "logoAlt": "World of ClaudeCraft",
+    "title": "Enerji Vadisi - Diyar Kullanılamıyor",
+    "logoAlt": "Enerji Vadisi",
     "eyebrow": "Diyar bakımı",
     "heading": "Diyar geçici olarak kullanılamıyor.",
     "body": "Oyun hizmetini yeniden başlatıyoruz ve Claudemoon'un kısa süre içinde geri döneceğini umuyoruz. Bu sayfa otomatik olarak denetlemeye devam edecek.",

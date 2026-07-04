@@ -96,12 +96,70 @@
     filter: drop-shadow(0 0 10px rgba(199, 148, 26, 0.3)) drop-shadow(1px 1px 2px #000);
   }
 
+  .header-wordmark {
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(238, 190, 76, 0.58);
+    background: linear-gradient(180deg, rgba(31, 26, 16, 0.88), rgba(8, 10, 14, 0.88));
+    color: #f7e9b8;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
   #title-logo {
     width: min(216px, 50vw);
     height: auto;
     filter: drop-shadow(0 0 20px rgba(199, 148, 26, 0.25)) drop-shadow(2px 2px 4px #000);
     animation: logo-pulse 2.5s ease-in-out infinite alternate;
     margin-bottom: var(--spacing-sm);
+  }
+
+  .title-wordmark {
+    display: grid;
+    width: min(520px, calc(100vw - 36px));
+    justify-items: center;
+    gap: 3px;
+    color: #f6f1dd;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #title-logo.title-wordmark {
+    width: min(520px, calc(100vw - 36px));
+  }
+
+  .title-wordmark__main {
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 8vw, 78px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 0;
+    text-shadow:
+      0 3px 0 rgba(62, 42, 12, 0.92),
+      0 0 24px rgba(238, 190, 76, 0.42),
+      0 12px 28px rgba(0, 0, 0, 0.78);
+  }
+
+  .title-wordmark__sub {
+    font-family: var(--font-heading);
+    font-size: clamp(15px, 2.4vw, 22px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #9ee7d4;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.82);
+  }
+
+  .title-wordmark--loading {
+    width: min(360px, 76vw);
+    margin-inline: auto;
+  }
+
+  .title-wordmark--loading .title-wordmark__main {
+    font-size: clamp(30px, 7vw, 48px);
   }
 
   .mobile-menu-toggle {
@@ -1106,6 +1164,10 @@
     font-size: 13px;
     line-height: 1.35;
     color: var(--color-text-muted);
+  }
+
+  #token-ca {
+    display: none;
   }
 
   /* Realm stats, live counts shown in the realm dropdown (trigger sub-line +
@@ -2198,14 +2260,14 @@
     letter-spacing: 0.8px;
     margin-right: var(--spacing-xs);
   }
-  /* $WOC contract address, click-to-copy pill, sits under the performance tip. */
+  /* Enerji Vadisi build: the upstream $WOC contract block is hidden on the landing screen. */
   #token-ca {
+    display: none;
     margin: var(--spacing-lg) auto 0;
     padding-top: var(--spacing-md);
     border-top: 1px solid rgba(255, 209, 0, 0.14);
     width: 100%;
     max-width: 600px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-sm);

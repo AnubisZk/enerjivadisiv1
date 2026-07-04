@@ -1889,9 +1889,9 @@ export const en_CA: EnTranslations = {
     "realmName": "Realm Name"
   },
   "footer": {
-    "copyright": "2026 World of ClaudeCraft",
-    "githubLink": "https://github.com/levy-street/world-of-claudecraft",
-    "githubLabel": "Open Source Project",
+    "copyright": "2026 Enerji Vadisi",
+    "githubLink": "https://github.com/AnubisZk/enerjivadisiv1",
+    "githubLabel": "Enerji Vadisi GitHub",
     "whitepaper": "Whitepaper",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
@@ -1940,7 +1940,7 @@ export const en_CA: EnTranslations = {
     "serverOnline": "Online",
     "serverOffline": "Offline",
     "play": "Play",
-    "playAria": "Play World of ClaudeCraft",
+    "playAria": "Play Enerji Vadisi",
     "serverLabel": "Choose your realm",
     "serverAria": "Select realm: Online or Offline",
     "serverOfflineSub": "Instant local world",
@@ -2633,14 +2633,14 @@ export const en_CA: EnTranslations = {
     }
   },
   "seo": {
-    "title": "World of ClaudeCraft: Classic-Style Web MMO",
-    "description": "Embark on an epic adventure in World of ClaudeCraft, a classic-style micro-MMO playable directly in your browser. Join a persistent shared realm, level up classes, and defeat enemies!",
+    "title": "Enerji Vadisi: REpower Training Adventure",
+    "description": "Play Windwright Vale, a REpower renewable-energy training adventure built inside World of ClaudeCraft.",
     "genre": "MMORPG",
     "playMode": "Multiplayer",
     "applicationCategory": "Game",
     "operatingSystem": "Web browser",
-    "officialLabel": "Official World of ClaudeCraft website",
-    "officialBody": "worldofclaudecraft.com is the official free browser MMO for the Claudemoon realm. Play online with a persistent character, explore solo offline, read the wiki, and follow verified community links from this site."
+    "officialLabel": "REpower training zone",
+    "officialBody": "Windwright Vale turns a renewable-energy field workflow into a playable quest chain: survey, supply, assembly, grounding, alignment, and fault diagnosis."
   },
   "a11y": {
     "goHome": "Go to homepage",
@@ -2648,9 +2648,9 @@ export const en_CA: EnTranslations = {
     "mainNavigation": "Main navigation",
     "languageSelection": "Language selection",
     "characterActions": "Character actions",
-    "githubProject": "Open the World of ClaudeCraft GitHub project",
+    "githubProject": "Open the Enerji Vadisi GitHub project",
     "discordCommunity": "Join the World of ClaudeCraft Discord community",
-    "donateProject": "Donate to support World of ClaudeCraft"
+    "donateProject": "Donate to support Enerji Vadisi"
   },
   "loading": {
     "world": "Loading world...",
@@ -2706,11 +2706,11 @@ export const en_CA: EnTranslations = {
       "later": "Later"
     },
     "crash": {
-      "title": "World of ClaudeCraft",
+      "title": "Enerji Vadisi",
       "body": "The game view stopped working. Reload it?",
       "reload": "Reload",
       "quit": "Quit",
-      "fatalBody": "World of ClaudeCraft hit an unexpected error and needs to close."
+      "fatalBody": "Enerji Vadisi hit an unexpected error and needs to close."
     }
   },
   "realm": {
@@ -2847,8 +2847,8 @@ export const en_CA: EnTranslations = {
     "otherInstallDetail": "Install or add this page to your Home screen for the best fullscreen mobile experience."
   },
   "serverUnavailable": {
-    "title": "World of ClaudeCraft - Realm Unavailable",
-    "logoAlt": "World of ClaudeCraft",
+    "title": "Enerji Vadisi - Realm Unavailable",
+    "logoAlt": "Enerji Vadisi",
     "eyebrow": "Realm maintenance",
     "heading": "The realm is temporarily unavailable.",
     "body": "We are restarting the game service and expect Claudemoon to return shortly. This page will keep checking automatically.",
