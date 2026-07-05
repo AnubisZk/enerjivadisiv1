@@ -106,6 +106,7 @@ const PROP_ASSET_DEFS: Record<string, PropAssetDef> = {
   // has its own backing slab so the animated shader plane sits on the front face.
   // yaw: Math.PI if the model loads backwards after inspecting in-game.
   delveEntrance2: { url: '/models/dungeon/delve_entrance_2.glb', kit: 'dungeon' },
+  leggedSkyTank: { url: '/models/props/energy_vale/legged_sky_tank.glb', kit: 'energyVale' },
 };
 
 type PropKey = keyof typeof PROP_ASSET_DEFS;
@@ -1388,6 +1389,21 @@ export function buildProps(seed: number, delveLabel?: (delveId: string) => strin
     // sit flush on the town-facing face of the backing (PlaneGeometry faces +z)
     face.position.set(dm.x, slabY, slabZ + 0.1);
     group.add(face);
+  }
+
+  // ---- one-off scenic props ----------------------------------------------
+  // Secret-area vitrines and other authored curiosities. These are intentionally
+  // skipped on the lowest tier: they are decorative, not navigational.
+  if (!lowProps) {
+    for (const sp of PROPS.scenicProps ?? []) {
+      if (!(sp.kind in PROP_ASSET_DEFS)) continue;
+      const key = sp.kind as PropKey;
+      const g = new THREE.Group();
+      addParts(g, key, { scale: sp.scale ?? 1 });
+      g.position.set(sp.x, ground(sp.x, sp.z) - 0.08, sp.z);
+      g.rotation.y = sp.rot ?? 0;
+      group.add(shadowed(g));
+    }
   }
 
   // ---- flush instanced batches ---------------------------------------------

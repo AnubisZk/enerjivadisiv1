@@ -165,6 +165,17 @@ export const ENERGY_VALE_NPCS: Record<string, NpcDef> = {
     greeting:
       'Welcome to the pavilion, $C. Every roofline here tells the same lesson in a different accent: wind needs room, sun needs angle, water needs patience, and heat needs respect. Walk slowly and the buildings will teach before I do.',
   },
+  seren_valea: {
+    id: 'seren_valea',
+    name: 'Seren Valea',
+    title: 'Valley Belle',
+    pos: { x: 181, z: 101 },
+    facing: -1.15,
+    color: 0xd889b8,
+    questIds: [],
+    greeting:
+      "You found the quiet fold of the vale, $C. Elara measures the wind where everyone can see it; I listen where it has to squeeze between stone and leaf. The strange walker behind me is harmless unless you insult its paint.",
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -360,16 +371,22 @@ export const ENERGY_VALE_PROPS: ZonePropsDef = {
     [146, 55],
     [147, 57],
     [144, 59],
+    [179, 102],
+    [183, 98],
   ],
-  campfires: [[146, 61]],
+  campfires: [
+    [146, 61],
+    [180, 99],
+  ],
   mudHuts: [],
-  ruinRings: [],
+  ruinRings: [{ x: 182, z: 100, ringR: 4.6, columns: 5 }],
   fences: [
     { x1: 152, z1: 53, x2: 165, z2: 53 },
     { x1: 165, z1: 53, x2: 165, z2: 71 },
     { x1: 152, z1: 71, x2: 165, z2: 71 },
   ],
   graveyards: [],
+  scenicProps: [{ kind: 'leggedSkyTank', x: 185, z: 99, rot: -0.65, scale: 3.1 }],
 };
 
 // ---------------------------------------------------------------------------

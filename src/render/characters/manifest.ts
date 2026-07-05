@@ -830,6 +830,12 @@ export const VISUALS: Record<string, VisualDef> = {
     clips: kaykit(['1H_Melee_Attack_Chop']),
     yaw: Math.PI,
   },
+  npc_valley_belle: {
+    url: '/models/chars/npcs/valley_belle.glb',
+    height: HUMANOID_H,
+    clips: kaykit(['1H_Melee_Attack_Chop']),
+    yaw: Math.PI,
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -916,6 +922,7 @@ const NPC_KEYS: Record<string, string> = {
   quartermaster_bree: 'npc_villager',
   brother_halven: 'npc_reliquary_keeper',
   mira_veyr: 'npc_pavilion_curator',
+  seren_valea: 'npc_valley_belle',
 };
 
 export function visualKeyFor(e: Entity): string {

@@ -1226,6 +1226,7 @@ export interface ZonePropsDef {
   ruinRings: { x: number; z: number; ringR: number; columns: number }[];
   fences: { x1: number; z1: number; x2: number; z2: number }[];
   graveyards: { x: number; z: number }[]; // 6-headstone cluster anchor
+  scenicProps?: { kind: string; x: number; z: number; rot?: number; scale?: number }[];
   // delveId resolves to the delve's localized name at render time (the carved
   // entrance sign), so the marker carries no hardcoded English label.
   delveMarkers?: { x: number; z: number; delveId: string }[];
