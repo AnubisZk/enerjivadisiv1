@@ -84,6 +84,7 @@ import { installWebGLContextRelease } from './render/context_release';
 import { firstRunGraphicsPreset, GFX, graphicsPresetLabel } from './render/gfx';
 import { Renderer } from './render/renderer';
 import { navigatorSaveData } from './render/sky';
+import { SecretPocketWebXRShowroom } from './render/webxr_secret_showroom';
 import { desktopBridge } from './runtime';
 import { pathCrossesFence } from './sim/colliders';
 import { ABILITIES, CLASSES } from './sim/content/classes';
@@ -946,9 +947,11 @@ async function startGame(
   uiEffectsApplier.applyNow();
   let renderer!: Renderer;
   let hud!: Hud;
+  let xrShowroom: SecretPocketWebXRShowroom | null = null;
   const perf = createPerfMonitor(null);
   try {
     renderer = new Renderer(world, canvas, nameplates);
+    xrShowroom = new SecretPocketWebXRShowroom();
     renderer.setAudioSink(sfx);
     renderer.showDevBadges = settings.get('showDevBadges');
     // Dev-only: ?targetcone=1 draws the Tab-target front cone on the ground in
@@ -2318,6 +2321,7 @@ async function startGame(
           alpha: acc / DT,
         }),
       );
+      xrShowroom?.update(world.player.pos.x, world.player.pos.z);
       perf.trace('ui.clickMoveMarker', () => updateClickMoveMarker());
       perf.markInputVisible(performance.now());
       perf.time('hud', () => perf.trace('hud.update', () => hud.update(), { mode: 'offline' }));
@@ -2422,6 +2426,7 @@ async function startGame(
         },
       ),
     );
+    xrShowroom?.update(world.player.pos.x, world.player.pos.z);
     perf.trace('ui.clickMoveMarker', () => updateClickMoveMarker());
     maybeShowImmobileNote(now);
     perf.markInputVisible(performance.now());
@@ -2471,6 +2476,7 @@ async function startGame(
           sim: world,
           world,
           renderer,
+          xrShowroom,
           input,
           hud,
           online,
