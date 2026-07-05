@@ -132,7 +132,7 @@ export const ENERGY_VALE_MOBS: Record<string, MobTemplate> = {
 };
 
 // ---------------------------------------------------------------------------
-// NPC — Elara Sunmere runs the worksite
+// NPCs — Elara runs the worksite; Mira tends the cultural energy pavilion.
 // ---------------------------------------------------------------------------
 
 export const ENERGY_VALE_NPCS: Record<string, NpcDef> = {
@@ -153,6 +153,17 @@ export const ENERGY_VALE_NPCS: Record<string, NpcDef> = {
     ],
     greeting:
       'Mind the cables, $C. The wind, the sun, the steam under this hill — the vale gives its power freely to anyone patient enough to measure first and build second. Most people skip the measuring. Most people also catch fire.',
+  },
+  mira_veyr: {
+    id: 'mira_veyr',
+    name: 'Mira Veyr',
+    title: 'Pavilion Curator',
+    pos: { x: 151, z: 66 },
+    facing: -2.4,
+    color: 0x2f6f86,
+    questIds: [],
+    greeting:
+      'Welcome to the pavilion, $C. Every roofline here tells the same lesson in a different accent: wind needs room, sun needs angle, water needs patience, and heat needs respect. Walk slowly and the buildings will teach before I do.',
   },
 };
 

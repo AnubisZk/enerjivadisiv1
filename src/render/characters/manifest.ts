@@ -824,6 +824,12 @@ export const VISUALS: Record<string, VisualDef> = {
     height: HUMANOID_H,
     clips: kaykit(['1H_Melee_Attack_Chop']),
   },
+  npc_pavilion_curator: {
+    url: '/models/chars/npcs/mira_veyr.glb',
+    height: HUMANOID_H,
+    clips: kaykit(['1H_Melee_Attack_Chop']),
+    yaw: Math.PI,
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -909,6 +915,7 @@ const NPC_KEYS: Record<string, string> = {
   provisioner_hale: 'npc_villager',
   quartermaster_bree: 'npc_villager',
   brother_halven: 'npc_reliquary_keeper',
+  mira_veyr: 'npc_pavilion_curator',
 };
 
 export function visualKeyFor(e: Entity): string {
